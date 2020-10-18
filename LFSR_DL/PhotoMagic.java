@@ -1,3 +1,24 @@
+/*
+* Encrypts images through LFSR operations:
+* 
+* Colors of individual pixels are extracted and the RGB components are XOR'd 
+* with an 8-bit integer that the given LFSR creates. The new color is then 
+* returned and replaces the original colored pixel.
+*
+* The goal of this is to be able to encrypt and decrypt images with a single
+* LFSR seed and 'tap' position. Images encrypted through this method are able
+* to be decrypted if the right seed and tap position are given.
+*
+* Usage: java PhotoMagic <IMAGE FILE> <SEED> <TAP>
+* Example: java PhotoMagic Xbasketball.png 01101000010100010000 17
+*
+* For standardization purposes, all images prefaced by an 'X' in the project folder 
+* are encrypted through the seed + tap combo of 01101000010100010000 and 17.
+*
+* Daniel Li
+*
+* Java 1.8.0
+*/
 import java.awt.Color;
 
 public class PhotoMagic {
