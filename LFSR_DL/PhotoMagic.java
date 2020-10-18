@@ -12,7 +12,7 @@
 * Usage: java PhotoMagic <IMAGE FILE> <SEED> <TAP>
 * Example: java PhotoMagic Xbasketball.png 01101000010100010000 17
 *
-* For standardization purposes, all images prefaced by an 'X' in the project folder 
+* For standardization purposes, all images prefaced by an 'X' in the 'images' folder 
 * are encrypted through the seed + tap combo of 01101000010100010000 and 17.
 *
 * Daniel Li
