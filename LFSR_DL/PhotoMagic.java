@@ -47,7 +47,7 @@ public class PhotoMagic {
     // Tester method
     public static void main(String args[]) {
         // Take command line arguments for image file, LFSR seed, and tap position
-        String image = args[0];
+        String image = String.format("images/%s",args[0]);
         String seed = args[1];
         int tap = Integer.parseInt(args[2]);
         LFSR_DL lfsr = new LFSR_DL(seed, tap);
