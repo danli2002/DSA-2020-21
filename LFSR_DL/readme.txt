@@ -8,7 +8,7 @@
 
 Programming Assignment 5: Linear-Feedback Shift Register
 
-Hours to complete assignment:
+Hours to complete assignment: ~2 hours
 
 
 /**********************************************************************
@@ -43,4 +43,6 @@ NO
 /**********************************************************************
  *  List any other comments here.                                     
  **********************************************************************/
+
+ Pretty fun project; one of the more fun projects I've done in the last couple of years.
 
