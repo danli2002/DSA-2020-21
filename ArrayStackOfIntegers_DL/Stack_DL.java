@@ -8,6 +8,7 @@
 * Daniel Li 
 * Java 1.8.0
 * 11/16/2020
+* 
 */
 
 import java.util.Iterator;
@@ -56,6 +57,7 @@ public class Stack_DL implements Iterable {
         }
     }
 
+    // checks the item at the top ('peeking' from the outside in)
     public Integer peek(){
         return items[top];
     }
@@ -94,8 +96,7 @@ public class Stack_DL implements Iterable {
         return iter;
     }
 
-    // Tester class, pushes 5 items and pops the last one, prints results at each
-    // step
+    // Tester class, pushes 5 items and pops the last one, prints results at each step
     public static void main(String[] args) {
         Stack_DL stack = new Stack_DL(10);
         System.out.println(stack.isEmpty());
