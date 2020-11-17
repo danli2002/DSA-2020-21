@@ -56,6 +56,10 @@ public class Stack_DL implements Iterable {
         }
     }
 
+    public Integer peek(){
+        return items[top];
+    }
+
     // overrides toString so it can print out in a neat manner
 
     public String toString() {
