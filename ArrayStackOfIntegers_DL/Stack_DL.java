@@ -7,10 +7,13 @@
 *
 * Daniel Li 
 * Java 1.8.0
-*
+* 11/16/2020
 */
 
-public class Stack_DL {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class Stack_DL implements Iterable {
     private Integer[] items;
     private int top;
 
@@ -53,7 +56,7 @@ public class Stack_DL {
         }
     }
 
-    // overrides toString
+    // overrides toString so it can print out in a neat manner
 
     public String toString() {
         String string = "";
@@ -63,7 +66,32 @@ public class Stack_DL {
         return string;
     }
 
-    // Tester class, pushes 5 items and pops the last one
+    // overrides iterator() and its methods so it special functions are compatible
+    // with it.
+
+    @Override
+    public Iterator iterator() {
+        Iterator iter = new Iterator() {
+            private int currIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return currIndex < items.length && items[currIndex] != null;
+            }
+
+            @Override
+            public Object next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                return items[currIndex++];
+            }
+        };
+        return iter;
+    }
+
+    // Tester class, pushes 5 items and pops the last one, prints results at each
+    // step
     public static void main(String[] args) {
         Stack_DL stack = new Stack_DL(10);
         System.out.println(stack.isEmpty());
