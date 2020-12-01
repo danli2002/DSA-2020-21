@@ -46,7 +46,7 @@ public class Queue_DL implements Iterable{
         
         } else {
             items[back] = object;
-            System.out.println("Just queued " + object);
+            // System.out.println("Just queued " + object);
             back++;
         }
         
@@ -59,7 +59,7 @@ public class Queue_DL implements Iterable{
             items[i] = items[i + 1];
         }
         back--;
-        System.out.println("Just dequeued " + object);
+        // System.out.println("Just dequeued " + object);
         // return the dequeued object
         return object;
     }
