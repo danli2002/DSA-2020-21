@@ -31,11 +31,11 @@ public class Postfix_DL {
     public int calculate(String postfix) {
         // string containing possible digits so that digits in a postfix expression can
         // be extracted
-        String operands = "-1-2-3-4-5-6-7-8-90";
         // splits postfix string by any number of whitespaces
+        String operators = "+-*/";
         String items[] = postfix.split("\\s+");
         for (String item : items) {
-            if (operands.contains(item)) {
+            if (!operators.contains(item)) {
                 // push an integer, not a string
                 operandStack.push(Integer.parseInt(item));
                 // the print statements featured in this code were initially for debug purposes,
