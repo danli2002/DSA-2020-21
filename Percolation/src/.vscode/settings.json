@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/dan/School/DSA-2020-21/Percolation/**/*.jar"
+    ]
+}
