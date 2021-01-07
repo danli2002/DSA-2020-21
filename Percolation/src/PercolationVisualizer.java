@@ -105,7 +105,7 @@ public class PercolationVisualizer {
     }
 
     public static void main(String[] args) {
-        simulateFromFile("input20.txt");
-        // simulateProbability(0.51, 5);
+        // simulateFromFile("input20.txt");
+        simulateProbability(0.59, 20);
     }
 }
