@@ -20,6 +20,7 @@ import java.awt.Font;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class PercolationVisualizer {
 
@@ -81,7 +82,30 @@ public class PercolationVisualizer {
         }
     }
 
+    private static void simulateProbability(double prb, int n) {
+        Percolation percolation = new Percolation(n);
+        // turn on animation mode
+        StdDraw.enableDoubleBuffering();
+
+        // repeatedly read in sites to open and draw resulting system
+        draw(percolation, n);
+        StdDraw.show();
+        StdDraw.pause(DELAY);
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(StdRandom.uniform() < prb){
+                    percolation.open(i, j);
+                    draw(percolation, n);
+                    StdDraw.show();
+            StdDraw.pause(DELAY);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         simulateFromFile("input20.txt");
+        // simulateProbability(0.51, 5);
     }
 }

@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloWorld<src_c78c7411>",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "src_c78c7411"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PercolationVisualizer<src_c78c7411>",
+            "request": "launch",
+            "mainClass": "PercolationVisualizer",
+            "projectName": "src_c78c7411"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StdRandom",
+            "request": "launch",
+            "mainClass": "edu.princeton.cs.algs4.StdRandom"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WeightedQuickUnionUF",
+            "request": "launch",
+            "mainClass": "edu.princeton.cs.algs4.WeightedQuickUnionUF"
+        }
+    ]
+}
