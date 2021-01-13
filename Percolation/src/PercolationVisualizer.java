@@ -80,6 +80,7 @@ public class PercolationVisualizer {
             StdDraw.show();
             StdDraw.pause(DELAY);
         }
+        StdDraw.save("FixedInputTest.png");
     }
 
     private static void simulateProbability(double prb, int n) {
@@ -102,10 +103,11 @@ public class PercolationVisualizer {
                 }
             }
         }
+        StdDraw.save(String.format("Random%dx%d-1.png", n, n));
     }
 
     public static void main(String[] args) {
-        // simulateFromFile("input20.txt");
-        simulateProbability(0.59, 20);
+        simulateFromFile("input20.txt");
+        // simulateProbability(0.59, 20);
     }
 }
